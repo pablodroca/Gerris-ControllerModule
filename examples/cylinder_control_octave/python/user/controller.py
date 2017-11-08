@@ -2,7 +2,7 @@ from oct2py import octave
 from math import *
 import logging
 
-actuationStartTime = 2.
+actuationStartTime = 42.
 velocityRef = 1.
 kProp = 1.75
 kInt = 0.023
