@@ -1,4 +1,4 @@
 #! /bin/bash
+./clear_results.sh
 mkdir -p results
-gerris2D -m cylinder_control.gfs
-
+time gerris2D -m cylinder_control.gfs 2>log.txt

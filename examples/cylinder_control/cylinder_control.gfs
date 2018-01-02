@@ -1,6 +1,6 @@
 # Gerris Flow Solver 2D version 1.3.2 (131206-12345)
 2 1 GfsSimulation GfsBox GfsGEdge {} {
-  Define BOX_SIZE 13
+  Define BOX_SIZE 7
   Define DT 0.05
   GfsGlobal {
         static double Re = 200;
@@ -28,7 +28,7 @@
   EventBalance { istep = 10 } 0.1
   SourceViscosity { } 1./Re {}
   AdaptVorticity { istep = 5 } { maxlevel = REFINE_MAX cmax=0.1 }
-  OutputTime { istep = 10 } stdout
+  OutputTime { step = 1 } stdout
   OutputSolidForce { step = DT } results/forces.dat
   OutputSimulation { step = 10 } results/cylinder_%3.3f.gfs { }
   OutputLocation { step=DT } results/probes.txt probesXYZ

@@ -74,7 +74,7 @@ class ExecutionContext:
 
     def __enter__(self):
         logging.info("Opening Gerris2Python FIFO at %s" % self.callFifoPath)
-        self.callFifo = open(self.callFifoPath, 'r')
+        self.callFifo = open(self.callFifoPath, 'r', 0)
         logging.info("Opening Python2Gerris FIFO at %s" % self.returnFifoPath)
         self.returnFifo = open(self.returnFifoPath, 'w', 0)
         logging.info("Opening Gerris2Python FIFO for actuation values at %s" % self.valuesFifoPath)
