@@ -51,7 +51,7 @@ You should download the source code, compile and install it as in the original G
 git clone https://github.com/pablodroca/Gerris-ControllerModule.git
 cd Gerris-ControllerModule
 cd gerris-stable
-sh autogen.sh && automake --add-missing
+sh autogen.sh CFLAGS='-O3 -DG_DEBUG=\"info\"' && automake --add-missing
 touch ./test-driver
 make && sudo make install
 ```
