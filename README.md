@@ -6,7 +6,7 @@ The following tutorial provides quick guidelines in how to install the Gerris Co
 
 As first step, it is recommended to test your environment against the latest version of Gerris. In order to install it, you should download the source code and required dependencies as follows:
 ```bash
-sudo apt-get install libglib2.0-dev libnetpbm10-dev m4 libproj-dev libgsl0-dev libnetcdf-dev libode-dev libfftw3-dev libhypre-dev libgtkglext1-dev libstartup-notification0-dev ffmpeg
+sudo apt-get install libglib2.0-dev libnetpbm10-dev m4 libproj-dev libgsl0-dev libnetcdf-dev libode-dev libfftw3-dev libhypre-dev libgtkglext1-dev libstartup-notification0-dev ffmpeg darcs libtool-bin libosmesa6-dev libftgl-dev
 darcs get http://gerris.dalembert.upmc.fr/darcs/gerris-stable
 darcs get http://gerris.dalembert.upmc.fr/darcs/gts-stable
 darcs get http://gerris.dalembert.upmc.fr/darcs/gfsview-stable
@@ -28,6 +28,7 @@ sh autogen.sh && automake --add-missing
 make && sudo make install
 cd ../gerris-stable
 sh autogen.sh && automake --add-missing
+touch ./test-driver
 make && sudo make install
 cd ../gfsview-stable
 sh autogen.sh && automake --add-missing
@@ -51,6 +52,7 @@ git clone https://github.com/pablodroca/Gerris-ControllerModule.git
 cd Gerris-ControllerModule
 cd gerris-stable
 sh autogen.sh && automake --add-missing
+touch ./test-driver
 make && sudo make install
 ```
 
