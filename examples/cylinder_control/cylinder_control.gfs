@@ -28,7 +28,7 @@
   EventBalance { istep = 10 } 0.1
   SourceViscosity { } 1./Re {}
   AdaptVorticity { istep = 5 } { maxlevel = REFINE_MAX cmax=0.1 }
-  OutputTime { step = 1 } stdout
+  OutputTime { step = .01 } stdout
   OutputSolidForce { step = DT } results/forces.dat
   OutputSimulation { step = 10 } results/cylinder_%3.3f.gfs { }
   OutputLocation { step=DT } results/probes.txt probesXYZ
