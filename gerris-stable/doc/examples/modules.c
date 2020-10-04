@@ -3,8 +3,6 @@
 
 int main (int argc, char * argv[])
 {
-  return 0;
-  //Modules check disabled as Controller initialization are not prepared for discovery and hangs the compilation cycle.
   if (g_module_supported ()) {
     guint i;
     for (i = 1; i < argc; i++) {
